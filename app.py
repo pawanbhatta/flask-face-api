@@ -1,18 +1,18 @@
 import numpy as np
 import pickle
 from flask import Flask, flash, request, redirect, url_for, render_template,jsonify
-import urllib.request
+# import urllib.request
 import os
 from werkzeug.utils import secure_filename
 
-import math
+# import math
 import face_recognition
-from sklearn import neighbors
+# from sklearn import neighbors
 import os
 import os.path
 import pickle
 from PIL import Image, ImageDraw
-from face_recognition.face_recognition_cli import image_files_in_folder
+# from face_recognition.face_recognition_cli import image_files_in_folder
 
 from flask_cors import CORS
 
@@ -147,8 +147,8 @@ def upload_image():
 # for i in range(5):    
 #     a=a.append(i)
     
-        # return render_template('index.html', filename=filename, predictions=output)
-        return output
+        return render_template('index.html', filename=filename, predictions=output)
+        # return output
         # return jsonify(output)
     else:
         flash('Allowed image types are - png, jpg, jpeg, gif')
@@ -165,4 +165,4 @@ def display_image(filename):
   
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=8000)  
